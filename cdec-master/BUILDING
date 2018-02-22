@@ -1,0 +1,32 @@
+To build cdec, you'll need:
+
+ * boost headers & boost program_options (you may need to install a package
+    like libboost-dev)
+
+
+Instructions for building
+-----------------------------------
+
+ 1) Create a build directory and generate Makefiles using CMake
+
+        mkdir build
+        cd build
+        cmake ..
+ 
+    If the cmake command completes successfully, you can proceed. If you have
+    libraries (such as Boost) installed in nonstandard locations, you may need
+    to run cmake with special options like -DBOOST_ROOT=/path/to/boost.
+
+ 2) Build
+
+        make -j 2
+   
+ 3) Test
+        make test
+        ./tests/run-system-tests.pl
+
+    Everything should pass.
+
+
+ 4) Enjoy!
+
